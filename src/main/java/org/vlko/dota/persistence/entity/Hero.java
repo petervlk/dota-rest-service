@@ -17,7 +17,8 @@ public class Hero {
   @Column(name = "name")
   private String name;
 
-  public Hero() {}
+  public Hero() {
+  }
 
   public Hero(Long id, String name) {
     this.id = id;

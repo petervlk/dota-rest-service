@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  db:
+    restart: always
+    image: postgres:latest
+    ports:
+      - "5000:5432"
+    volumes:
+      - ./src/main/resources/db/init_db_data.sql:/docker-entrypoint-initdb.d/init.sql
+
+
+#  data-scrapper:
+#    restart: always
+#    image: data-scrapper:latest
+#    depends_on:
+#      - db
+#      - zookeeper
+#      - kafka
+#    environment:
+#      - SCRAPING_PERIOD_WEATHER=10000
+#      - KAFKA_BOOTSTRAP_SERVER=localhost:29092
+#      - KAFKA_TOPIC_WEATHER=riskwolf_weather
+#      - WEATHER_API_KEY=43dfb9594baa18e834fcb3465a82b284
+#      - WEATHER_API_URL=https://api.openweathermap.org/data/2.5/weather
+#      - DB_URL=jdbc:postgresql://db:5432/postgres
+#      - DB_USER=postgres
+#      - DB_PASSWORD=
+

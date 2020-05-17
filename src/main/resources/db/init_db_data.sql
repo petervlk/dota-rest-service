@@ -1,0 +1,127 @@
+------------------------------------------------------------
+-- DDL
+------------------------------------------------------------
+create table if not exists dota_hero
+(
+ id serial not null constraint dota_hero_pk primary key,
+ name varchar(100) default ''::character varying
+ );
+
+------------------------------------------------------------
+-- DATA
+  ------------------------------------------------------------
+INSERT INTO public.dota_hero (name) VALUES('Abaddon');
+INSERT INTO public.dota_hero (name) VALUES('Alchemist');
+INSERT INTO public.dota_hero (name) VALUES('Ancient Apparition');
+INSERT INTO public.dota_hero (name) VALUES('Anti-Mage');
+INSERT INTO public.dota_hero (name) VALUES('Arc Warden');
+INSERT INTO public.dota_hero (name) VALUES('Axe');
+INSERT INTO public.dota_hero (name) VALUES('Bane');
+INSERT INTO public.dota_hero (name) VALUES('Batrider');
+INSERT INTO public.dota_hero (name) VALUES('Beastmaster');
+INSERT INTO public.dota_hero (name) VALUES('Bloodseeker');
+INSERT INTO public.dota_hero (name) VALUES('Bounty Hunter');
+INSERT INTO public.dota_hero (name) VALUES('Brewmaster');
+INSERT INTO public.dota_hero (name) VALUES('Bristleback');
+INSERT INTO public.dota_hero (name) VALUES('Broodmother');
+INSERT INTO public.dota_hero (name) VALUES('Centaur Warrunner');
+INSERT INTO public.dota_hero (name) VALUES('Chaos Knight');
+INSERT INTO public.dota_hero (name) VALUES('Chen');
+INSERT INTO public.dota_hero (name) VALUES('Clinkz');
+INSERT INTO public.dota_hero (name) VALUES('Clockwerk');
+INSERT INTO public.dota_hero (name) VALUES('Crystal Maiden');
+INSERT INTO public.dota_hero (name) VALUES('Dark Seer');
+INSERT INTO public.dota_hero (name) VALUES('Dark Willow');
+INSERT INTO public.dota_hero (name) VALUES('Dazzle');
+INSERT INTO public.dota_hero (name) VALUES('Death Prophet');
+INSERT INTO public.dota_hero (name) VALUES('Disruptor');
+INSERT INTO public.dota_hero (name) VALUES('Doom');
+INSERT INTO public.dota_hero (name) VALUES('Dragon Knight');
+INSERT INTO public.dota_hero (name) VALUES('Drow Ranger');
+INSERT INTO public.dota_hero (name) VALUES('Earth Spirit');
+INSERT INTO public.dota_hero (name) VALUES('Earthshaker');
+INSERT INTO public.dota_hero (name) VALUES('Elder Titan');
+INSERT INTO public.dota_hero (name) VALUES('Ember Spirit');
+INSERT INTO public.dota_hero (name) VALUES('Enchantress');
+INSERT INTO public.dota_hero (name) VALUES('Enigma');
+INSERT INTO public.dota_hero (name) VALUES('Faceless Void');
+INSERT INTO public.dota_hero (name) VALUES('Gyrocopter');
+INSERT INTO public.dota_hero (name) VALUES('Huskar');
+INSERT INTO public.dota_hero (name) VALUES('Invoker');
+INSERT INTO public.dota_hero (name) VALUES('Io');
+INSERT INTO public.dota_hero (name) VALUES('Jakiro');
+INSERT INTO public.dota_hero (name) VALUES('Juggernaut');
+INSERT INTO public.dota_hero (name) VALUES('Keeper of the Light');
+INSERT INTO public.dota_hero (name) VALUES('Kunkka');
+INSERT INTO public.dota_hero (name) VALUES('Legion Commander');
+INSERT INTO public.dota_hero (name) VALUES('Leshrac');
+INSERT INTO public.dota_hero (name) VALUES('Lich');
+INSERT INTO public.dota_hero (name) VALUES('Lifestealer');
+INSERT INTO public.dota_hero (name) VALUES('Lina');
+INSERT INTO public.dota_hero (name) VALUES('Lion');
+INSERT INTO public.dota_hero (name) VALUES('Lone Druid');
+INSERT INTO public.dota_hero (name) VALUES('Luna');
+INSERT INTO public.dota_hero (name) VALUES('Lycan');
+INSERT INTO public.dota_hero (name) VALUES('Magnus');
+INSERT INTO public.dota_hero (name) VALUES('Medusa');
+INSERT INTO public.dota_hero (name) VALUES('Meepo');
+INSERT INTO public.dota_hero (name) VALUES('Mirana');
+INSERT INTO public.dota_hero (name) VALUES('Monkey King');
+INSERT INTO public.dota_hero (name) VALUES('Morphling');
+INSERT INTO public.dota_hero (name) VALUES('Naga Siren');
+INSERT INTO public.dota_hero (name) VALUES('Nature’s Prophet');
+INSERT INTO public.dota_hero (name) VALUES('Necrophos');
+INSERT INTO public.dota_hero (name) VALUES('Night Stalker');
+INSERT INTO public.dota_hero (name) VALUES('Nyx Assassin');
+INSERT INTO public.dota_hero (name) VALUES('Ogre Magi');
+INSERT INTO public.dota_hero (name) VALUES('Omniknight');
+INSERT INTO public.dota_hero (name) VALUES('Oracle');
+INSERT INTO public.dota_hero (name) VALUES('Outworld Devourer');
+INSERT INTO public.dota_hero (name) VALUES('Pangolier');
+INSERT INTO public.dota_hero (name) VALUES('Phantom Assassin');
+INSERT INTO public.dota_hero (name) VALUES('Phantom Lancer');
+INSERT INTO public.dota_hero (name) VALUES('Phoenix');
+INSERT INTO public.dota_hero (name) VALUES('Puck');
+INSERT INTO public.dota_hero (name) VALUES('Pudge');
+INSERT INTO public.dota_hero (name) VALUES('Pugna');
+INSERT INTO public.dota_hero (name) VALUES('Queen of Pain');
+INSERT INTO public.dota_hero (name) VALUES('Razor');
+INSERT INTO public.dota_hero (name) VALUES('Riki');
+INSERT INTO public.dota_hero (name) VALUES('Rubick');
+INSERT INTO public.dota_hero (name) VALUES('Sand King');
+INSERT INTO public.dota_hero (name) VALUES('Shadow Demon');
+INSERT INTO public.dota_hero (name) VALUES('Shadow Fiend');
+INSERT INTO public.dota_hero (name) VALUES('Shadow Shaman');
+INSERT INTO public.dota_hero (name) VALUES('Silencer');
+INSERT INTO public.dota_hero (name) VALUES('Skywrath Mage');
+INSERT INTO public.dota_hero (name) VALUES('Slardar');
+INSERT INTO public.dota_hero (name) VALUES('Slark');
+INSERT INTO public.dota_hero (name) VALUES('Sniper');
+INSERT INTO public.dota_hero (name) VALUES('Spectre');
+INSERT INTO public.dota_hero (name) VALUES('Spirit Breaker');
+INSERT INTO public.dota_hero (name) VALUES('Storm Spirit');
+INSERT INTO public.dota_hero (name) VALUES('Sven');
+INSERT INTO public.dota_hero (name) VALUES('Techies');
+INSERT INTO public.dota_hero (name) VALUES('Templar Assassin');
+INSERT INTO public.dota_hero (name) VALUES('Terrorblade');
+INSERT INTO public.dota_hero (name) VALUES('Tidehunter');
+INSERT INTO public.dota_hero (name) VALUES('Timbersaw');
+INSERT INTO public.dota_hero (name) VALUES('Tinker');
+INSERT INTO public.dota_hero (name) VALUES('Tiny');
+INSERT INTO public.dota_hero (name) VALUES('Treant Protector');
+INSERT INTO public.dota_hero (name) VALUES('Troll Warlord');
+INSERT INTO public.dota_hero (name) VALUES('Tusk');
+INSERT INTO public.dota_hero (name) VALUES('Underlord');
+INSERT INTO public.dota_hero (name) VALUES('Undying');
+INSERT INTO public.dota_hero (name) VALUES('Ursa');
+INSERT INTO public.dota_hero (name) VALUES('Vengeful Spirit');
+INSERT INTO public.dota_hero (name) VALUES('Venomancer');
+INSERT INTO public.dota_hero (name) VALUES('Viper');
+INSERT INTO public.dota_hero (name) VALUES('Visage');
+INSERT INTO public.dota_hero (name) VALUES('Warlock');
+INSERT INTO public.dota_hero (name) VALUES('Weaver');
+INSERT INTO public.dota_hero (name) VALUES('Windranger');
+INSERT INTO public.dota_hero (name) VALUES('Winter Wyvern');
+INSERT INTO public.dota_hero (name) VALUES('Witch Doctor');
+INSERT INTO public.dota_hero (name) VALUES('Wraith King');
+INSERT INTO public.dota_hero (name) VALUES('Zeus');

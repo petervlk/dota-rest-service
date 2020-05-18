@@ -16,7 +16,9 @@ public class HeroModelAssembler {
   public EntityModel<Hero> toModel(Hero hero) {
     return EntityModel.of(hero,
         linkTo(methodOn(HeroController.class).getOneLinked(hero.getId())).withSelfRel(),
-        linkTo(methodOn(HeroController.class).getAllLinked()).withRel("heroes"));
+        linkTo(methodOn(HeroController.class).getAllLinked()).withRel("heroList"),
+        linkTo(methodOn(HeroController.class).getOne(hero.getId())).withRel("selfWithoutLinks")
+    );
   }
 
   public CollectionModel<EntityModel<Hero>> toModel(List<Hero> heroList) {
@@ -24,6 +26,8 @@ public class HeroModelAssembler {
         heroList.stream()
             .map(this::toModel)
             .collect(Collectors.toList()),
-        linkTo(methodOn(HeroController.class).getAllLinked()).withRel("heroes"));
+        linkTo(methodOn(HeroController.class).getAllLinked()).withRel("heroList"),
+        linkTo(methodOn(HeroController.class).getAll()).withRel("heroListWithoutLinks")
+        );
   }
 }

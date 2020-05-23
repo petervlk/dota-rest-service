@@ -8,11 +8,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MessagingConfiguration {
 
-  @Value("${broker.queue.name}")
-  private String queueName;
-
   @Bean
-  public Queue queue() {
+  public Queue queue(@Value("${broker.queue.name}") String queueName) {
     return new Queue(queueName, false);
   }
 }

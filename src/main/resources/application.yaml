@@ -9,4 +9,4 @@ spring:
 
 broker:
   queue:
-    name: heroDetailQueue
+    name: ${MSG_QUEUE_NAME}

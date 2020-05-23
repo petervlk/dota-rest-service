@@ -8,17 +8,21 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.vlko.dota.persistence.entity.Hero;
 import org.vlko.dota.persistence.repository.HeroRepository;
+import org.vlko.dota.service.MessagingService;
 
 @RestController
 public class HeroController {
-
   private final HeroRepository repository;
   private final HeroModelAssembler modelAssembler;
+  private final MessagingService messagingService;
 
-  public HeroController(HeroRepository repository,
-                        HeroModelAssembler modelAssembler) {
+  public HeroController(
+      HeroRepository repository,
+      HeroModelAssembler modelAssembler,
+      MessagingService messagingService) {
     this.repository = repository;
     this.modelAssembler = modelAssembler;
+    this.messagingService = messagingService;
   }
 
   @GetMapping("/simple")
@@ -44,7 +48,9 @@ public class HeroController {
   }
 
   private Hero getHero(Long id) {
-    return repository.findById(id)
+    Hero hero = repository.findById(id)
         .orElseThrow(() -> new HeroNotFoundException(id));
+    messagingService.sendProfileViewed(hero);
+    return hero;
   }
 }

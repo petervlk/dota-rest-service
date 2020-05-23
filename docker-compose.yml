@@ -3,22 +3,17 @@ version: '2'
 services:
   db:
     restart: always
-    image: postgres:latest
+    image: postgres:12.3
     ports:
       - "5000:5432"
     volumes:
       - ./src/main/resources/db/init_db_data.sql:/docker-entrypoint-initdb.d/init.sql
-
-  data-service:
-    restart: always
-    image: tomassukenik/react-app:hateoas-service-0.0.1
-    ports:
-      - "9000:8081"
-    depends_on:
-      - db
     environment:
-      - DB_URL=jdbc:postgresql://db:5432/postgres
-      - DB_USER=postgres
-      - DB_PASSWORD=
-#    env_file:
-#      - .env
+      - POSTGRES_PASSWORD=postgres
+
+  rabbitmq:
+    image: rabbitmq:3.8.3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+

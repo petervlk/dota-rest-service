@@ -3,6 +3,7 @@ package org.vlko.dota.controller;
 import java.util.List;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +11,7 @@ import org.vlko.dota.persistence.entity.Hero;
 import org.vlko.dota.persistence.repository.HeroRepository;
 import org.vlko.dota.service.MessagingService;
 
+@CrossOrigin
 @RestController
 public class HeroController {
   private final HeroRepository repository;
